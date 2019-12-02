@@ -1,0 +1,117 @@
+.pokedex-wrapper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.title{
+    text-align: center;
+    font-weight: 500;
+    width: 40%;
+    border: 1px solid black;
+    margin: 10px;
+}
+.main-wrapper{
+    display: flex;
+    width: 90%;
+    height: 100%;
+    flex-direction: row;
+}
+.list-wrapper{
+    display: flex;
+    width: 60%;
+    height: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.detail-item-wrapper{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    /* top: 5%;
+    left: 60%; */
+}
+.load-button{
+    width: 90%;
+    background-color: #008cff;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 0 0 5px black;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.types-wrapper{
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 425px) and (min-width: 320px){
+    .title{
+        width: 80%;
+    }
+    .main-wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .list-wrapper{
+        width: 80%;
+    }
+    .detail-item-wrapper{
+        bottom: 0%;
+    }
+    .more-info-wrapper{
+        background-color: #ffffff;
+    }
+}
+@media screen and (max-width: 890px) and (min-width: 425px){
+    .title{
+        width: 80%;
+    }
+    .list-wrapper{
+        width: 100%
+    }
+    .more-info-wrapper{
+        background-color: #ffffff;
+    }
+    .detail-item-wrapper{
+        left: 30%;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 890px){
+    .title{
+        width: 50%;
+    }
+    .list-wrapper{
+        width: 55%;
+    }
+    .detail-item-wrapper{
+        left: 55%;
+        bottom: -5%;
+    }
+}
+@media screen and (max-width: 2560px) and (min-width: 1024px){
+    .title{
+        width: 50%;
+    }
+    .list-wrapper{
+        width: 60%;
+    }
+    .detail-item-wrapper{
+        left: 60%;
+        bottom: -5%;
+    }
+}

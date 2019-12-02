@@ -1,0 +1,39 @@
+.more-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 350px;
+    height: 530px;
+    border: 1px solid black;
+   
+}
+.more-info-image{
+    width: 300px;
+    height: 250px;
+}
+.more-info-title{
+    font-size: 22px;
+    font-weight: 700;
+}
+.more-info-title::first-letter, .td::first-letter{
+    text-transform: uppercase;
+}
+.table-wrapper{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    border-collapse: collapse;
+}
+.td{
+    font-size: 16px;
+    border: 1px solid black;
+    text-align: center;
+}
+.iconClose{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    align-self: flex-end;
+}
