@@ -18,14 +18,13 @@ export default class PokedexItem extends React.Component{
         images: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.props.index + 1}.png`
     }
     componentDidMount = () => {
-        axios.get(`https://pokeapi.co/api/v2/pokemon/${this.props.index + 1}`,  {
+        axios.get(this.props.item.url,  {
             headers: {
                 'Access-Control-Allow-Origin': 'pokeapi.co',
                 'Content-Type': 'application/json'
             }     
         })
             .then( (response) => {
-                console.log(response.data.types)
                 this.setState({
                     types: response.data.types
                 })
@@ -55,7 +54,7 @@ export default class PokedexItem extends React.Component{
         const {props, state} = this
         return(
             <div className='item-wrapper' onClick={ () => this.props.getMoreInformation(props.index)}>
-                <img className='item-image' src={state.images}/>
+                <img className='item-image' src={state.images} alt='pokemon'/>
                 <span className='item-name'>{props.item.name}</span>
                 <div className="types-wrapper">
                     {this.state.types.map((item, index) => this.createItem(item, index))}

@@ -16,30 +16,10 @@ export default class PokedexList extends React.Component{
             types: [],
             weight: 0,
             total_moves: 0
-        },
-        allTypes: [],
-        filterColor: 'all'
+        }
     }
     componentDidMount = () => {
        this.getInformation(this.state.firstUrl)
-       this.getAllTypes()
-    }
-    getAllTypes = () => {
-        axios.get('https://pokeapi.co/api/v2/type?limit=999', {
-            headers: {
-                'Access-Control-Allow-Origin': 'pokeapi.co',
-                'Content-Type': 'application/json'
-                
-            }  
-        })
-            .then( (response) => {
-                this.setState({
-                    allTypes: response.data.results
-                })
-            })
-            .catch( (error) => {
-                console.log(error)
-            })
     }
     getInformation = (url) => {
         axios.get(url,  {
